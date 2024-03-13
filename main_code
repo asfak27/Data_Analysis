@@ -1,0 +1,33 @@
+import pandas as pd
+import requests
+import re
+
+df = pd.read_csv("/content/drive/MyDrive/Colab Notebooks/ffff.csv", usecols=[1],nrows=20000)
+
+# Assuming your DataFrame is named df, and the column with short links is 'short_link'
+# Create a new column for the actual links
+df['actual_link'] = ''
+
+# Function to clean and resolve short links to actual links
+def clean_and_resolve_short_link(short_link):
+    try:
+        # Clean the link by removing brackets and single quotation marks
+        cleaned_link = re.sub(r'[\[\]\']', '', short_link)
+
+        if pd.notna(cleaned_link):  # Check if the value is not NaN after cleaning
+            response = requests.head(cleaned_link, allow_redirects=True)
+            actual_link = response.url
+            return actual_link
+        else:
+            return None
+    except Exception as e:
+        #print(f"Error resolving link {short_link}: {str(e)}")
+        return None
+
+# Apply the function to each row in the DataFrame
+df['actual_link'] = df['Extract_links'].apply(clean_and_resolve_short_link)
+
+# Display the updated DataFrame
+print(df)
+
+#df.to_csv("/content/drive/MyDrive/Colab Notebooks/ex4.csv")
