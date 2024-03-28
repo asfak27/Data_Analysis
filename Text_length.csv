@@ -1,0 +1,149 @@
+,Unnamed: 0,id_str,created_at,favorite_count,retweet_count, text,Text_lenth
+0,0,1424867026108047365,2021-08-09 22:55:46,0,0,"@caitp69 @RReverser Sorry about that, I think that is either a bug in the npm client or incorrect documentation on the website because `--offline` is meant to make no network requests at all https://t.co/OLqp1BsxAz",173
+1,1,1424848755900272652,2021-08-09 21:43:10,1,0,@caitp69 @RReverser `npm install --offline` should do it,38
+2,2,1391916490274877443,2021-05-11 00:42:06,2,0,"@bitandbang this action can turn on automerge for a pull-request which meets whatever rules you want. e.g. a scheduled action running npm audit and making a pr, then use this action to merge when the checks pass --https://t.co/8LmG6q85er",203
+3,3,1374415348288475141,2021-03-23 17:38:49,3,0,"@joelanman The npm package @financial-times/sass is the executable and works across multiple platforms, we use it in heroku and other platforms and it works great for us",149
+4,4,1354838779190796291,2021-01-28 17:08:31,0,0,"@lukeed05 @MylesBorins Perhaps this could be solved in the npm client instead? Give it a list of registries to search within, that way each registry doesn't need to have their own proxy implementation",179
+5,5,1354836870094532612,2021-01-28 17:00:56,1,0,Is it possible to have a shared npm scope across two registries? public packages on the npmjs registry and private packages on the github registry? /cc @MylesBorins and @lukeed05 as I imagine you have both come across this issue in your travels and may have the answer 🤞,249
+6,6,1338812160760221696,2020-12-15 11:44:27,4,0,"@_chenglou Yes it is, we do that by using the os and CPU package.json fields and having a different npm package for each, then one package which has all of those specific packages as optional dependencies https://t.co/Anh4jNvFos",195
+7,7,1325964422339301376,2020-11-10 00:52:08,0,0,@enricoschaaf @mjackson @remix_run hard to do as npm only allow 500 webhooks i believe and you need 1 webhook per package. i'm not sure there is a way to be notified for each version publish of each package on npm,181
+8,8,1322153193028145152,2020-10-30 12:27:40,0,0,"@CodePen is there a way to install npm packages and to configure sass load-paths to look in node_modules?
+With those two features we could import sass packages from npm :-)",164
+9,9,1316043919122206720,2020-10-13 15:51:35,0,0,"@ali_mert_cakar @polyfillio We have this page which lists the extra npm packages we have -- https://t.co/n0uTImoHNs
+
+We are happy to accept a pull-request which improves that page's content if you have ideas :-)",162
+10,10,1298695620820185091,2020-08-26 18:55:39,0,0,@sangwhanmoon Deduplication isn't something npm does but pnpm does it at the package level,77
+11,11,1283715352204058625,2020-07-16 10:49:24,0,1,@BenLesh The library which contains all the polyfills for @polyfillio is hopefully getting to a place where it can be a single well-known source. We have a NodeJS npm package similar to core-js and we have another npm package with DOM and JavaScript polyfills -- https://t.co/HZiVUNb3W3,244
+12,12,1282974492180967426,2020-07-14 09:45:30,3,0,"@robpalmer2 '@​financial-times/sass'
+Prebuilt dart-sass binaries for nearly all platforms, available via npm. Get the performance benefits of the Dart VM with the ease of an npm install
+https://t.co/o1hvToZ4J1",175
+13,13,1279495561683636228,2020-07-04 19:21:28,0,0,"@ryanflorence 6054 files, it's the npm library for https://t.co/29YaS03zrD which contains all polyfills and there tests. One file per polyfill and one file for testing a polyfill",142
+14,14,1265326492520677378,2020-05-26 16:58:39,1,0,@aendrew Make a new npm namespace and migrate all packages to it and deprecate the other namespace,90
+15,15,1260153977125158912,2020-05-12 10:24:55,0,0,"@_munter_ I use the boxen npm module to draw boxes in the CLI, maybe that module can help here as well :)",96
+16,16,1259552766579671043,2020-05-10 18:35:55,1,0,"@NickColley I'm doing the last three on a side-project (camera roll of my holiday photos). Using a few npm packages to do it all. 'resize-img' to resize, 'image-size' to get exact sizes for width and height attr, 'imagemin-webp' to convert to webp, and the `loading=lazy` attr on img elements",281
+17,17,1250763672760332288,2020-04-16 12:31:12,2,0,"@simonleggsays I grind the beans whilst I run `npm install` and then I store them in an ""airtight"" tub. I have so many ground beans because `npm install` takes so long.",154
+18,18,1250229889397133314,2020-04-15 01:10:08,0,0,"@b0neskull @openjsf I run https://t.co/29YaS03zrD and the underlying npm packages. I've not read or heard about what the OpenJS CPC does, is there somewhere I can go to learn about this?",145
+19,19,1248397845364740097,2020-04-09 23:50:15,0,0,"@garybernhardt We ship prebuilt binaries for the major OSes on npm and have a parent package which installs the correct binary based on the os + cpu arch -- https://t.co/yhrsJkLnYq
+
+We have the same for prebuilt dart-sass binaries, which are much faster than node-sass -- https://t.co/o1hvToZ4J1",235
+20,20,1237063602697392133,2020-03-09 17:12:01,0,0,"`npm install --save-optional &lt;package&gt;` does not work because it actually tries to install the package, which fails to install (as it should) and so npm doesn't add the package to the `optionalDependencies` section.
+
+cc @izs, is this possible?",245
+21,21,1237062813132218373,2020-03-09 17:08:52,0,0,"How can you add an optional dependency to package.json via the npm command when the optional dependency does not support the platform the npm command is running on?
+
+I.E. On linux and wanting to add an optional dependency which only installs on windows machines?",262
+22,22,1227544849659912194,2020-02-12 10:47:53,0,0,@adam_baldwin @jvehent @mattaustin @eleuterio_ Does the path to a package matter in this instance? How come npm audit doesn't use the deduplicated package-lock tree?,122
+23,23,1218228082768797697,2020-01-17 17:46:23,0,0,@dependabot Is there a guide on how to publish an npm package and have the dependabot PRs for that package have good-looking changelog and release-notes? Dependabot PRs for o-layout are missing those features and I want to fix that -- https://t.co/2E3ozqRCJT,224
+24,24,1135950442272317442,2019-06-04 16:44:25,4,0,"@mjackson The one they are building is open source and federated though, whereas the npm registry is closed and centralised",114
+25,25,1131592364714278912,2019-05-23 16:06:58,1,0,@WebReflection @npmjs https://t.co/i6vQ4dOSzM,2
+26,26,1131592285249003520,2019-05-23 16:06:39,0,0,@WebReflection @npmjs Issues are on their discourse instance,40
+27,27,1127190092198612992,2019-05-11 12:33:54,0,0,@shizzmd @oriSomething @andrestaltz The tarballs are still via the npm registry,46
+28,28,1115680045023027201,2019-04-09 18:17:05,1,0,"@stefbirb @mountain_ghosts `npm i underscore@npm:lodash` will install lodash under the name underscore, which means `require(""underscore"")` will return lodash",129
+29,29,1115678826720313344,2019-04-09 18:12:15,1,0,@mountain_ghosts It was for alias support but now npm has it :),47
+30,30,1110981502257557504,2019-03-27 19:06:45,0,0,"@fquednau @polyfillio I don't think there are alternatives out there unfortunately. If you have a NodeJS server, you can use the npm package and get the polyfills from that directly :-) https://t.co/B7L5TrW0jS",166
+31,31,1098710267670773762,2019-02-21 22:25:15,0,0,"@izs @npmjs That definitely counts, I'll keep my eye out for when a London role become available :-)",90
+32,32,1098702782918545409,2019-02-21 21:55:31,1,0,@izs @npmjs Will @npmjs ever have jobs in London? I'd love to apply if they become available here,81
+33,33,1090388334164221953,2019-01-29 23:16:51,1,0,@jefflembeck @npmjs @katie_fenn @aeflash @koste4 Anything in London at all? 🤞,33
+34,34,1070709596539535366,2018-12-06 16:00:35,0,0,@maybekatz @npmjs I just moved a project to yarn for this exact feature! I am so excited to move back to npmjs :) great work by you and the team!,129
+35,35,1021731424574087168,2018-07-24 12:18:49,0,0,"@npmjs Hi, I can no longer log in to my account as I seem to have triggered some rate limiting. Do you know how long the rate limiting lasts for? https://t.co/1L72DlslWP",140
+36,36,1021729080281116672,2018-07-24 12:09:30,1,0,"@ungoldman I will push the code to GitHub, add you as a collaborator and then get you added to the npm package maintainers list :-)",121
+37,37,1002987962903166976,2018-06-02 18:58:59,1,0,@doramilitaru Another npm CDN is jsDelivr: https://t.co/Fec4uVh7Gx,30
+38,38,949744419485507584,2018-01-06 20:48:09,0,0,@ljharb @npmjs They have posted on the status page -- https://t.co/wMemOIIEAR,41
+39,39,897013908493479936,2017-08-14 08:35:56,2,0,@_developit @npmjs Or disallow periods in New package names?,43
+40,40,853986358838394880,2017-04-17 14:59:48,0,0,@aweary @codeincontext @JonthanFielding @polyfillio We use the useragent module on npm :-) happy to discuss and help collaborate between the projects if that is wanted.,120
+41,41,846075309925519360,2017-03-26 19:04:07,0,0,"@_simon__says - Make an npm account
+- open terminal to project directory
+- `npm init`
+- `npm version {major/minor/patch}`
+- `npm publish`",124
+42,42,814314036909264896,2016-12-29 03:36:10,1,0,"@TheLarkInn Not yet, I checked on npm and latest was 1.14. Is 2 stable?",60
+43,43,808838697747644416,2016-12-14 00:59:07,2,0,@drboolean npmjs module named set.up from @CWMma adds those and many other methods,66
+44,44,783804395368681472,2016-10-05 23:01:44,1,0,@kentcdodds if brave you can try IED in place of npm.,42
+45,45,1288857746343952390,2020-07-30 15:23:27,1,0,you literally do not have to use npm packages,45
+46,46,1043316562453774336,2018-09-22 01:50:27,0,0,ended up cloning the repo and npm linking it and it works fine when you treat it like a normal node project 👌,109
+47,47,1038948523704758273,2018-09-10 00:33:25,1,1,"i made a crate! it's like npm scripts but for cargo
+https://t.co/3qpZjVXMBz
+🦀📦",55
+48,48,1038517704142082048,2018-09-08 20:01:30,0,0,does a cargo subcommand that lets you define commands in Cargo.toml a la npm scripts sound like a good idea?,108
+49,49,987705313712275462,2018-04-21 14:51:12,0,0,just had a super weird npm bug where the index.js of one package was replaced with the index.js of another. clean cache solved it though 🤷‍♀️,141
+50,50,883721755432452096,2017-07-08 16:17:39,0,0,"My wallet, aside from the obvious, only contains an almost complete book shop loyalty card and a spare @npmjs sticker",111
+51,51,860080807666487297,2017-05-04 10:36:58,1,0,those were all on empty caches btw. npm5 also has cache improvements 🎉,70
+52,52,860076265910435840,2017-05-04 10:18:55,4,2,"quick test shows a nice little perf improvement coming in npm5
+
+npm i    1:22.46
+npm5 i  59.895
+yarn      41.686",112
+53,53,846687860258488321,2017-03-28 11:38:11,1,0,@cheedear ive found rollup can need a lot of config when you start using external deps (from npm),88
+54,54,821083383702884352,2017-01-16 19:55:08,0,0,Trying out node on windows. npm doctor is so helpful 👌 https://t.co/wboqaPLZVd,55
+55,55,715533225288982528,2016-03-31 13:36:29,1,0,"""That's the thing with npm: it's not all nice, some of it's grunt""",66
+56,56,664823296110776320,2015-11-12 15:13:20,0,0,@lewiscowper `git clone git@github.com:npm/npm.git npm/npm` using the directory arg,64
+57,57,603919692407922688,2015-05-28 13:44:09,0,0,Scoped modules on npm are really easy to use! No more worrying about cluttering the global namespace,100
+58,58,553744632283406336,2015-01-10 02:46:23,0,0,"I put my ajax lib on npm so you can try it out!
+https://t.co/LlJmiwiaJJ",48
+59,59,1095588637939564546,2019-02-13 07:41:00,1,1,"“npm package building, reimagined.” https://t.co/BaCXTc1LVR https://t.co/NxUno4OhmI",37
+60,60,833681623388450816,2017-02-20 14:16:02,1,2,“A simple CLI tool for vetting npm package versions” https://t.co/MGpe7pI0uE https://t.co/XlhFRBIIun,54
+61,61,790455570419646464,2016-10-24 07:31:08,2,2,Simple build tools: npm scripts vs Makefile vs runjs https://t.co/FbNwBZCdQH https://t.co/ZSFx0sT2Q3,54
+62,62,735372591427428352,2016-05-25 07:31:03,0,2,Git Hook - npm install if package.json is Modified https://t.co/kITCsZlGUS,51
+63,63,707483818245136386,2016-03-09 08:31:01,0,0,Update outdated npm modules with zero pain peerigon/updtr https://t.co/RUWDp6PPTv via @francoisz https://t.co/WNVihjhXlr,64
+64,64,662714588111110144,2015-11-06 19:34:05,0,0,“Turning GoLang code into an npm module with GopherJS” https://t.co/Piit6SzyUN,55
+65,65,1092791267807903745,2019-02-05 14:25:15,0,0,"@photonstorm @rolnaaba yeah, from what I've observed in the browser games context, devs usually come from the background of other languages and avoid jumping right into TypeScript + webpack. If the dev is not familiar with the npm ecosystem it can be scary indeed",242
+66,66,889799971553390592,2017-07-25 10:50:19,0,0,"@fasterthanlime @npmjs @code let's call it ""legacy"". I've been looking through node's http module and it's quite scary as well. so many hacks and edge cases.",131
+67,67,886177097181519872,2017-07-15 10:54:18,0,0,"@fasterthanlime installing old projects with npm, some dependency ALWAYS breaks for random reason :( even if you're using the correct semver",125
+68,68,847547215623147520,2017-03-30 20:32:57,0,0,@Rich_Harris that's handy. may be the rawgit of the npm modules :P,54
+69,69,784330186833563649,2016-10-07 09:51:03,0,0,@CreateJS hey. Are there plans to support modern JavaScript workflows on CreateJS? consuming it through npm would be great.,114
+70,70,1181854034044440577,2019-10-09 08:48:54,1,0,Nothing's like watching `npm install` running while Guillaume Tell's Overture is in background,94
+71,71,1161628153116319744,2019-08-14 13:18:28,4,3,"📢 Just released Comfygure 1.1!
+
+A new command: comfy diff
+And fixing a few bugs
+
+npm install -g comfygure@1.1.0
+
+https://t.co/R6Nf7BFooi https://t.co/w09wS4ycw3",112
+72,72,1085881887644512257,2019-01-17 12:49:51,1,0,@fharper @npmjs @AperoWebNancy,2
+73,73,1017693250759593984,2018-07-13 08:52:33,1,0,"All the NPM tokens were invalidated due to a security issue.
+Forensic analysis will be conducted by the @npmjs team.
+
+https://t.co/XRzRWs55Wu",112
+74,74,910564516706086913,2017-09-20 18:01:12,1,0,@beefancohen @geteslint @NPM Totally agree! But I think @npm_support will be a better help than the Nasdaq. (the irony),81
+75,75,785868857680470016,2016-10-11 15:45:11,0,1,"Facebook introduce Yarn, a package manager over npm registry but with a dependencies lockfile https://t.co/5vUqRFXach",94
+76,76,725958905029763072,2016-04-29 08:04:25,0,0,Keep your npm up-to-date https://t.co/Ml2h39B4Ms,25
+77,77,696631142276063232,2016-02-08 09:46:21,0,0,A bigger swap and npm install --max-old-space-size=2Mo helped me so far. (thx @Sethpolma),79
+78,78,696629949717942272,2016-02-08 09:41:37,0,0,When 'npm install' crashes your t2.micro in lack of memory ... https://t.co/tpn44py2pU,63
+79,79,1408373128653381634,2021-06-25 10:34:54,2,0,@HerrBertling @npmjs for me it's clearer to have a https://t.co/AIsDX1Gr3J in the repo: https://t.co/c2RwZwFh1b https://t.co/kTzroffMuY,47
+80,80,1408355508092911625,2021-06-25 09:24:53,0,0,@HerrBertling @npmjs you gonna add a license?,26
+81,81,1223229828058558465,2020-01-31 13:01:32,1,0,I’ve been hesitant to switch from npm to yarn... mainly because I’m concerned about how it handles threads.,107
+82,82,1423499433103134721,2021-08-06 04:21:26,3,0,"importing npm package in framer is tricky, but this one is helpful https://t.co/40HqeDYMqR",67
+83,83,1361541241318428673,2021-02-16 05:01:42,0,0,"@dadimdum harusnya npm nya ga ngaruh ya
+
+https://t.co/90L2EW9PUw",32
+84,84,1348493017716457473,2021-01-11 04:52:43,4,0,"Kehilangan 2FA npm account apakah ada cara buat recover?
+
+Issue: https://t.co/57GLstiXbo
+
+Demo: https://t.co/MbKyxvXDf9",73
+85,85,1339936515292422149,2020-12-18 14:12:14,3,0,"Published in npm and codesandbox
+
+✨ npm install sonwan-ui
+🤝 https://t.co/bhnKhm5bBT https://t.co/Pui8ZkS9SJ",61
+86,86,1291321837876461568,2020-08-06 10:34:52,0,0,@achmadmahardi @ans4175 @Ajiballinst @npmjs @diraldira oo,7
+87,87,1291321043349458944,2020-08-06 10:31:42,0,0,"@achmadmahardi @ans4175 @Ajiballinst @npmjs @diraldira ada hubungannya?
+
+https://t.co/x1EVl1Nt4f",23
+88,88,1320343124359610369,2020-10-25 12:35:06,1,0,"@izqui9 In theory (I've never had someone else install it before), `npm i -g alfreth` should do. You need Alfred installed, with the powerpack.
+
+Here's the code
+https://t.co/eCk8wkrpQo",154
+89,89,1254433246408069127,2020-04-26 15:32:46,12,0,"To use it, install pocketh via npm and use the calldata command: `npm i -g pocketh`, then `pocketh calldata &lt;contract-address&gt; &lt;calldata&gt;`.",151
+90,90,1310693422953447424,2020-09-28 21:30:38,0,0,Can't do any more work today. npm install generates too much heat! 🥵,68
+91,91,966828764016517120,2018-02-23 00:15:14,1,0,@Martndemus @rondale_sc The difference for me is in lock file philosophy. 'npm install' uses package.json for truth and updates the lockfile. Yarn on the other hand treats the lock file as the source of truth and only modifies it when you ask explicitly. 'yarn add/remove/upgrade'.,259
+92,92,839350618858778624,2017-03-08 05:42:36,0,0,Forgive me world for the gratuitous #npm package; I swear I needed this for a project: https://t.co/dXFz6te3Sy - it even has tests!,108
+93,93,612885946766196736,2015-06-22 07:32:51,0,0,@codeclimate Can I bug you guys for an npm release of the javascript-test-reporter as well?  I think thats the last step before WOOT!,121
+94,94,569317964073152514,2015-02-22 02:09:14,1,0,Published my very first @npmjs package https://t.co/h0E9vmMueh. Adds noscript to  #embercli.  Wanted to mark the occasion with #myfirstTweet,110
+95,95,1115684963804823552,2019-04-09 18:36:38,0,0,@holtbt @martinwoodward Seems like a really cool setup for projects that need pre-release testing. Unfortunately I haven't been able to figure out how to get the npm task working,156
+96,96,1115669665273933824,2019-04-09 17:35:50,0,0,@holtbt I'm looking for an example of using an azure release pipeline for a node library (eventually publishing to npm with an explicit approval). Know of anything?,157
+97,97,1059845604619112448,2018-11-06 16:30:57,0,0,"@mjackson @robdel12 I've been switching everything to yarn because my team had had several issues where npm issues we report as bugs have been classified as non-bugs or ""fixed"".",159
+98,98,1048039368546385920,2018-10-05 02:37:11,6,0,npm tart,8
+99,99,1045377521225588736,2018-09-27 18:19:57,0,2,"#TypeScript #ProTip - when targeting versions of ambient types, consider using the automatically-generated npm dist-tag corresponding to your project's typescript version.
+
+@DefinitelyTyped @typescriptlang https://t.co/A92l3KrmEY",175
